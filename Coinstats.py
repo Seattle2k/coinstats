@@ -24,15 +24,17 @@ class BotHandler:
 
     def get_last_update(self):
         get_result = self.get_updates()
-        print('printing get_last_update result')
+        print('printing get_last_update result:')
         print(get_result)
 
         if len(get_result) > 0:
             last_update = get_result[-1]
+            print('1')
         else:
             last_update = get_result[len(get_result)]
-
+            print('2')
         return last_update
+        print('3')
 
 
 greet_bot = BotHandler(token)
@@ -46,8 +48,10 @@ def main():
     hour = now.hour
 
     while True:
+        print('in WHILE statement...')
         greet_bot.get_updates(new_offset)
-
+        print('greetbotget:')
+        print(greet_bot.get_updates(new_offset))
         last_update = greet_bot.get_last_update()
 
         last_update_id = last_update['update_id']
