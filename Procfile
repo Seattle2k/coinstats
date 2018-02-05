@@ -1,1 +1,1 @@
-web: python coinstats.py
+web: python Coinstats.py
