@@ -50,7 +50,7 @@ def main():
     while True:
         print('in WHILE statement...')
         greet_bot.get_updates(new_offset)
-        print('greetbotget:')
+        print('greetbot_get:')
         print(greet_bot.get_updates(new_offset))
         last_update = greet_bot.get_last_update()
 
