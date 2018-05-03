@@ -13,8 +13,6 @@ class BotHandler:
         resp = requests.get(self.api_url + method, params)
         #resp = requests.get(self.api_url + method)
         print('resp')
-        print(resp)
-        print('resp2')
         result_json = resp.json()['result']
         return result_json
 
